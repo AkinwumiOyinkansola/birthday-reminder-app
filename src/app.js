@@ -15,4 +15,8 @@ app.use(express.static(path.join(__dirname, "public")));
 // Routes
 app.use("/users", userRoutes);
 
+app.get("/", (req, res) => {
+  res.send("🎉 Birthday Reminder API is running!");
+});
+
 module.exports = app;
